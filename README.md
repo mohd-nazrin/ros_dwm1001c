@@ -1,83 +1,108 @@
-# ros_dwm1001c
-Project Description
+# ros_uwb_dwm1001
 
-ros_dwm1001c is a ROS Noetic package designed for seamless integration with the Qorvo DWM1001 ultra-wideband (UWB) modules, providing enhanced real-time location tracking and positioning capabilities. This package is built upon existing open-source projects from the Human and Intelligent Vehicle Ensembles (HIVE) Lab and extends their functionality to support ROS 1 Noetic environments.
+## Project Description
 
-Key Features
+**ros_uwb_dwm1001** is a ROS Noetic package designed for seamless integration with the [Qorvo DWM1001](https://www.qorvo.com/products/p/DWM1001-DEV) ultra-wideband (UWB) modules, providing enhanced real-time location tracking and positioning capabilities. This package is built upon existing open-source projects from the Human and Intelligent Vehicle Ensembles (HIVE) Lab and extends their functionality to support ROS 1 Noetic environments.
 
-	•	UWB Positioning with ROS Integration: Utilizes Qorvo DWM1001 modules to publish UWB positioning data as PointStamped messages over the ROS network, enabling easy access to precise location data in ROS-compatible applications.
-	•	Transform Calculations: Converts UWB positions into map-space odometry data, facilitating integration with other robotic systems and navigation algorithms within the ROS framework.
-	•	Easy Deployment and Use: Offers straightforward installation and configuration steps, making it accessible to users with varying levels of experience in robotics and ROS.
+## Key Features
 
-Modifications and Enhancements
+- **UWB Positioning with ROS Integration**: Utilizes Qorvo DWM1001 modules to publish UWB positioning data as `PointStamped` messages over the ROS network, enabling easy access to precise location data in ROS-compatible applications.
 
-	•	ROS Noetic Compatibility: Adapted the original ROS 2 package to be compatible with ROS 1 Noetic, providing a bridge for users who have not yet transitioned to ROS 2.
-	•	Customizable Topics: Allows for custom topic names and message types, ensuring flexibility in how data is published and consumed within your robotic applications.
-	•	Enhanced Data Handling: Improved error handling and data parsing to ensure robustness and reliability in dynamic and noisy environments.
+- **Transform Calculations**: Converts UWB positions into map-space odometry data, facilitating integration with other robotic systems and navigation algorithms within the ROS framework.
 
-Usage Scenarios
+- **Easy Deployment and Use**: Offers straightforward installation and configuration steps, making it accessible to users with varying levels of experience in robotics and ROS.
 
-	•	Robotics Localization: Integrate with mobile robots to enhance their localization and navigation systems using precise UWB positioning data.
-	•	Industrial Automation: Deploy in manufacturing and warehouse environments to track assets, monitor worker locations, and improve workflow efficiency.
-	•	Research and Development: Use as a platform for developing and testing new algorithms and applications in robotics and IoT.
+## Modifications and Enhancements
 
-Getting Started
+- **ROS Noetic Compatibility**: Adapted the original ROS 2 package to be compatible with ROS 1 Noetic, providing a bridge for users who have not yet transitioned to ROS 2.
 
-To get started with the ros_dwm1001c package, follow the steps below to clone the repository, build the package, and configure your ROS environment.
+- **Customizable Topics**: Allows for custom topic names and message types, ensuring flexibility in how data is published and consumed within your robotic applications.
 
-Prerequisites
+- **Enhanced Data Handling**: Improved error handling and data parsing to ensure robustness and reliability in dynamic and noisy environments.
 
-	•	ROS Noetic: Ensure that you have ROS Noetic installed on your system. You can find installation instructions for ROS Noetic here.
-	•	Catkin Workspace: You should have a catkin workspace set up. If not, you can create one using the instructions below.
+## Usage Scenarios
 
-Step-by-Step Installation
+- **Robotics Localization**: Integrate with mobile robots to enhance their localization and navigation systems using precise UWB positioning data.
 
-	1.	Set Up Your Catkin Workspace
-If you do not already have a catkin workspace, you can create one with the following commands:
-# Create a directory for your workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
+- **Industrial Automation**: Deploy in manufacturing and warehouse environments to track assets, monitor worker locations, and improve workflow efficiency.
 
-# Initialize the workspace
-catkin_init_workspace
+- **Research and Development**: Use as a platform for developing and testing new algorithms and applications in robotics and IoT.
 
-	2.	Clone the Repository
-Navigate to the src directory of your catkin workspace and clone the repository:
-cd ~/catkin_ws/src
-git clone https://github.com/mohd-nazrin/ros_dwm1001c.git
+## Getting Started
 
-	3.	Build the Package
-After cloning the repository, build the package using catkin_make:
-cd ~/catkin_ws
-catkin_make
+To get started with the `ros_uwb_dwm1001` package, follow the steps below to clone the repository, build the package, and configure your ROS environment.
 
-This command will compile the package and set up the necessary dependencies.
+### Prerequisites
 
-	4.	Source Your Workspace
-Before using the package, you need to source your catkin workspace to make the new package available:
-source ~/catkin_ws/devel/setup.bash
+- **ROS Noetic**: Ensure that you have ROS Noetic installed on your system. You can find installation instructions for ROS Noetic [here](http://wiki.ros.org/noetic/Installation).
 
-Add this line to your .bashrc file to ensure that your workspace is automatically sourced every time you open a new terminal:
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+- **Catkin Workspace**: You should have a catkin workspace set up. If not, you can create one using the instructions below.
 
-	5.	Configure and Run the Nodes
-Launch the provided ROS launch file to start the package and its nodes. This will automatically start the UWB positioning and transformation nodes:
-roslaunch ros_dwm1001c uwb_odometry.launch
+### Step-by-Step Installation
 
-	•	This command will start the nodes necessary for publishing UWB positioning data and performing coordinate transformations.
+1. **Set Up Your Catkin Workspace**
 
- 	6.	Verify the Installation
-Use the following commands to verify that the nodes are running and the topics are being published:
-# List all active topics
-rostopic list
+   If you do not already have a catkin workspace, you can create one with the following commands:
 
-# Echo the UWB position topic to verify data output
-rostopic echo /uwb_pos
+   ```bash
+   # Create a directory for your workspace
+   mkdir -p ~/catkin_ws/src
+   cd ~/catkin_ws/src
 
-# Echo the transformed odometry data
-rostopic echo /odometry/ips
+   # Initialize the workspace
+   catkin_init_workspace
+   ```
 
-Acknowledgments
+ 2. **Clone the Repository**
+
+    Navigate to the `src` directory of your catkin workspace and clone the repository:
+	
+    ```bash
+    cd ~/catkin_ws/src
+    git clone https://github.com/mohd-nazrin/ros_uwb_dwm1001.git
+    ```
+    
+3. **Build the Package**
+    After cloning the repository, build the package using catkin_make:
+   ```bash
+   cd ~/catkin_ws
+   catkin_make
+   ```
+
+   This command will compile the package and set up the necessary dependencies.
+4. **Source Your Workspace**
+   Before using the package, you need to source your catkin workspace to make the new package available:
+   ```bash
+   source ~/catkin_ws/devel/setup.bash
+   ```
+   
+   Add this line to your .bashrc file to ensure that your workspace is automatically sourced every time you open a new terminal:
+   ```bash
+   echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+   source ~/.bashrc
+   ```
+   
+5. **Configure and Run the Nodes**
+   Launch the provided ROS launch file to start the package and its nodes. This will automatically start the UWB positioning and transformation nodes:
+   ```bash
+   roslaunch ros_uwb_dwm1001 uwb_odometry.launch
+   ```
+   This command will start the nodes necessary for publishing UWB positioning data and performing coordinate transformations.
+6. **Verify the Installation**
+   Use the following commands to verify that the nodes are running and the topics are being published:
+   ```bash
+   # List all active topics
+   rostopic list
+   
+   # Echo the UWB position topic to verify data output
+   rostopic echo /uwb_pos
+   
+   # Echo the transformed odometry data
+   rostopic echo /odometry/ips
+   ```
+
+### Acknowledgments
 
 This project is based on code from the Human and Intelligent Vehicle Ensembles (HIVE) Lab, originally licensed under the Apache License 2.0 and the MIT License. For more details, please see the LICENSE and NOTICE files in this repository.
+
+   
