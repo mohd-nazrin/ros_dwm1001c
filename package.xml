@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_uwb_dwm1001</name>
+  <version>0.0.0</version>
+  <description>The ros_uwb_dwm1001 is a ROS Noetic package designed for seamless integration with the Qorvo DWM1001 ultra-wideband (UWB) modules.</description>
+
+  <maintainer email="mohdnazrin82@gmail.com">Mohd Nazrin Muhammad</maintainer>
+  <license>Apache-2.0</license>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Runtime dependencies -->
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+
+  <!-- Other dependencies -->
+  <depend>python-numpy</depend>
+  <depend>python-scipy</depend>
+
+</package>

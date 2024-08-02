@@ -1,0 +1,14 @@
+<launch>
+  <!-- Launch the UWB Position Publisher Node -->
+  <node name="dwm1001c" pkg="ros_uwb_dwm1001" type="dwm1001c.py" output="screen">
+    <!-- Add any parameters or remappings here if necessary -->
+  </node>
+
+  <!-- Launch the Transform Node -->
+  <node name="transform_node" pkg="ros_uwb_dwm1001" type="transform.py" output="screen">
+    <!-- Specify the covariance as a string that can be parsed into a list -->
+    <param name="position_cov" type="string" value="[0.01, 0.01, 0.01]" />
+  </node>
+  <!-- Remove the following line if there is already map topic -->
+  <node pkg="tf" type="static_transform_publisher" name="dwm1001_to_map" args="0 0 0 0 0 0 map dwm1001 100" />
+</launch>
