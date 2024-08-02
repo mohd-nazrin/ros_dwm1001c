@@ -83,12 +83,16 @@ To get started with the `ros_uwb_dwm1001` package, follow the steps below to clo
    ```
    
 5. **Configure and Run the Nodes**
+   Before launch, check scripts/dwm1001c.py file to ensure correct serial port:
+   ```bash
+   serial_handle = Serial('/dev/ttyACM0', 115200, timeout=15)  # Update port as necessary
+   ```
    Launch the provided ROS launch file to start the package and its nodes. This will automatically start the UWB positioning and transformation nodes:
    ```bash
    roslaunch ros_uwb_dwm1001 uwb_odometry.launch
    ```
    This command will start the nodes necessary for publishing UWB positioning data and performing coordinate transformations.
-6. **Verify the Installation**
+7. **Verify the Installation**
    Use the following commands to verify that the nodes are running and the topics are being published:
    ```bash
    # List all active topics
