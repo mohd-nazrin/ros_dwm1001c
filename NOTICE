@@ -1,0 +1,24 @@
+# NOTICE
+
+This project includes code from the Human and Intelligent Vehicle Ensembles (HIVE) Lab.
+
+Original Code:
+- **dwm1001c.py** is based on [dwm1001.py](https://github.com/the-hive-lab/pydwm1001/blob/main/dwm1001.py)
+  - **License**: MIT License
+  - **Original Copyright**: (c) 2023 The Human and Intelligent Vehicle Ensembles (HIVE) Lab
+
+- **transform.py** is based on [dwm1001_transform_node.py](https://github.com/the-hive-lab/dwm1001_ros2/blob/integration/dwm1001_transform/dwm1001_transform/dwm1001_transform_node.py)
+  - **License**: Apache License 2.0
+  - **Original Copyright**: (c) 2023 The Human and Intelligent Vehicle Ensembles (HIVE) Lab
+
+## Modifications Made by [Your Name]
+- **dwm1001c.py**:
+  1. Converted Python code to ROS-compatible Python code.
+  2. Published `TagPosition` as a `PointStamped` message on the "uwb_pos" topic.
+
+- **transform.py**:
+  1. Converted from ROS2 to ROS1.
+  2. Modified to receive input from "uwb_pos".
+  3. Output the transformed data to "odometry/ips".
+
+For full licensing details, see the LICENSE file in the root of this repository.
