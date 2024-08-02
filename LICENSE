@@ -1,8 +1,15 @@
-# Combined License for ros_dwm1001c Project
+# Combined License for My Project
+
+## Copyright Statements
+
+Copyright (c) 2023 The Human and Intelligent Vehicle Ensembles (HIVE) Lab  
+Copyright (c) 2024 Mohd Nazrin Muhammad
+
+This project contains code derived from work by the Human and Intelligent Vehicle Ensembles (HIVE) Lab, which is licensed under both the Apache License 2.0 and the MIT License. Modifications and additional code by Mohd Nazrin Muhammad are licensed under the same licenses as the original work to ensure compatibility.
+
+---
 
 ## Apache License 2.0
-
-Copyright (c) 2023 The Human and Intelligent Vehicle Ensembles (HIVE) Lab
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -190,8 +197,6 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 END OF TERMS AND CONDITIONS
 
 ## MIT License
-
-Copyright (c) 2023 The Human and Intelligent Vehicle Ensembles (HIVE) Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
